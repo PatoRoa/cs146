@@ -1,2 +1,5 @@
-For both of my approaches, I went with a using 2 strings; one for the original word, and a new one for the same word but reversed, all within a new defined function.
-After that, I ran a checker to iterate through both strings at the same time, and if a letter mismatched, it would output saying that the word is not a plaindrome.
+For both of my approaches, I went with a using 2 arrays; one for the original word, and a new one that's the same as the original, but runs through aphanumeric and lowercase checks to make sure both strings are filled with nothing but lowercase letters.
+
+After succeeding these checks through a temporary array, the new array is created and using the original array, by running either an array reversal or for loop iterating backwards through it, the new array is essentially the same as the original array but backwards.
+
+Finally, both arrays are compared to each other and if they are the same, the program outputs the message saying they are, and if they are not, then this is outputted.
