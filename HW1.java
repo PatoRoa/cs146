@@ -1,28 +1,34 @@
+import java.util.ArrayList;
+
 public class HW1 {
     public static void main(String[] args) {
-        String s = "malayalam";
+        String s = "Malay alam";
         checkPalindrome(s);
     }
     public static void checkPalindrome(String string) {
-        char[] arrayS = string.toCharArray();
+        char[] tempArray = string.toCharArray();
+        ArrayList<Character> array = new ArrayList<Character>();
 
-        char[] arrayT = new char[string.length()];
+        for (int i = 0; i <= tempArray.length - 1; i++) {
+            if (Character.isLetterOrDigit(tempArray[i])) {
+                array.add(Character.toLowerCase(tempArray[i]));
+            }
+        }
+
+        ArrayList<Character> arrayT = new ArrayList<Character>();
+
         int j = 0;
-        for (int i = string.length() - 1; i >= 0; i--) {
-            arrayT[j] = arrayS[i];
+        for (int i = array.size() - 1; i >= 0; i--) {
+            arrayT.add(array.get(i));
             j++;
         }
 
-        for (int k = 0; k < string.length() - 1; k++) {
-            if (arrayS[k] == arrayT[k]) {
-                continue;
-            }
-            else {
-                System.out.println(string + " is not a palindrome.");
-                return;
-            }
+        if (array.equals(arrayT)) {
+            System.out.println(string + " is a palindrome.");
+            return;
         }
-        System.out.println(string + " is a plaindrome.");
-        return;
+        else {
+            System.out.println(string + " is not a palindrome.");
+        }
     }
 }
