@@ -1,11 +1,20 @@
-s = "malayalam"
+s = "Malay alam"
 
 
 def check_palindrome(string):
-    t = s[::-1]
+    temp_array = s.lower()
+    array = []
+    
+    for i in temp_array:
+        if i.isalnum():
+            array.append(i)
 
-    for i in range(len(s)):
-        if s[i] == t[i]:
+    print("array = ", array)
+
+    t = array[::-1]
+
+    for i in range(len(array)):
+        if array == t:
             continue
         else:
             return print("'" + s + "'" + " is not a palindrome.")
