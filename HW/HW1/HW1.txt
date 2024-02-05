@@ -1,0 +1,2 @@
+For both of my approaches, I went with a using 2 strings; one for the original word, and a new one for the same word but reversed, all within a new defined function.
+After that, I ran a checker to iterate through both strings at the same time, and if a letter mismatched, it would output saying that the word is not a plaindrome.
