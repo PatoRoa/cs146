@@ -1,4 +1,2 @@
-For this Lab I went with essentially utilizing both given strings as arrays and iterating through both of them using nested for loops. For every time the program iterates through a letter in the first array, it iterates through the entirety of the second array, and if a letter from the first array matches with a letter
-from the second array, a counter goes up by one.
-According to the program, for the second array to be an anagram of the first array, counter should only reach 1, so it checks if it ever reaches 2, or if it never reaches 0, and subsequently says
-if t
+For this Lab I went with essentially utilizing both given strings as arrays and iterating through both of them using nested for loops. For every time the program iterates through a letter in the first array, it iterates through the entirety of the second array, and if a letter from the first array matches with a letter from the second array, a counter goes up by one.
+According to the program, for the second array to be an anagram of the first array, counter should only reach 1, so it checks if it ever reaches 2, or if it never reaches 0, and subsequently says the second array has missing or repeated letters or if it's not the same size as the first array.
