@@ -1,0 +1,3 @@
+For this Lab I opted for iterating through the array of numbers, making the subtraction of the sum minus the current number in the array, and if that subtraction could be found in the array, then output the indices of both the result of the subtraction and the current number.
+Aside from that it was multiple case checks, like repeating terms, and if a term could not be found in the array.
+For the Java version I had to rewrite the two functions that were native to the Python version.
