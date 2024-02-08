@@ -1,1 +1,2 @@
-
+For this homework, I used recursive binary search which uses the isBadVersion() API as the first condition, then works from there
+The parameters are established first, using a for loop to create the array of versions, and after choosing a found bad version, the binary search uses that version to find the first bad version.
