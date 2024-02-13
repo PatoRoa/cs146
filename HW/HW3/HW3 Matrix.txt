@@ -1,1 +1,22 @@
+For the matrix multiplication algorithm, I placed the costs and complexities next to each line.
 
+MATRIX_MULTIPLY(A, B):                                        -> 1 time = c1
+  if columns(A) ≠ rows(B):                                    -> N+1 times = (c2)(N+1)
+    raise ValueError("Matrix multiplication is not defined.") -> (Doesn't run, assuming the input is correct)
+
+  rows_A ← number of rows in A                                -> 1 time = c3
+  cols_A ← number of columns in A                             -> 1 time = c4
+  cols_B ← number of columns in B                             -> 1 time = c5
+  result ← matrix of size rows_A x cols_B filled with zeros   -> 1 time = c6
+
+  for i from 1 to rows_A do:                                  -> N+1 times = (c7)(N+1)
+    for j from 1 to cols_B do:                                -> (N)(N+1) times = (c8)(N)(N+1)
+    sum ← 0                                                   -> (N)(N) times = (c9)(N)(N)
+      for k from 1 to cols_A do:                              -> (N)(N)(N+1) times = (c10)(N)(N)(N+1)
+        sum ← sum + A[i][k] * B[k][j]                         -> (N)(N)(N) times = (c11)(N)(N)(N)
+      result[i][j] ← sum return result                        -> (N)(N) times = (c12)(N)(N)
+
+The calculation of the costs and their Ns resulted in the following 3rd-degree equation:
+(c10 + c11)(N^3) + (c8 + c9 + c12)(N^2) + (c7 + c8 + c10)(N) + c1 + c2 + c3 + c4 + c5 + c6 + c7
+
+Therefore, the matrix multiplication algorithm has a growth of at least or similar to O(n^3)
