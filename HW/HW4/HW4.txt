@@ -2,6 +2,10 @@ Problem 1
 For Insertion Sort, I found the time complexity of the best case scenario, being an already sorted array of elements in ascending order, to be of O(n), since there are no swaps being done and only as many comparisons as there are elements in the array.
 The worst case  and average case boil down to a sorted array of elements in descending order, or a half-way sorted array in ascending order, where, as my calculations in HW3 returned 
 (c5 + c6 + c7 + c8)(N^2) + (c2 + c3 + c4 + c5)(N) + c1 + c2 + c9
-which when simplifying gives a complexity of, or similar to, O(n^2)
+which when simplifying gives a complexity of, or similar to, O(n^2).
 
 Problem 2
+For the Matrix Multiplication implementation, the best, average, and worst case scenario will always be of time complexity O(n^3), since no matter what the input is, the program will iterate through the three for loops to iterate through the matrices.
+My calculations from HW3 give
+(c10 + c11)(N^3) + (c8 + c9 + c12)(N^2) + (c7 + c8 + c10)(N) + c1 + c2 + c3 + c4 + c5 + c6 + c7
+which can be simplified to a complexity of, or similar to, O(n^3).
