@@ -1,0 +1,21 @@
+Problem 1
+  1. n^3 - n^3 eventually becomes bigger than n^2
+  2. n^2 * log n = n * (log n)^10 - Both functions almost go parallel with little space between them when graphed
+  3. n^(log n) - √n is more consistent and smaller
+  4. 2^(2n) - 2^(2n) is more impactful than 2^n
+
+
+Problem 2
+  isPrime(n):                       -> N     = c1 * N
+    for (i = 2; i * i <= n; i++) {  -> N + 1 = c2 * (N+1)
+      if (n % i == 0) {             -> N     = c3 * N
+        return false                -> 1     = c4
+      }                             -> 
+    return true                     -> 1     = c4
+    }                               -> 
+
+  Time complexity: (c1 + c2 + c3)(N) + c2 + c4 = O(n)
+
+  Best case: n < 4; if n = 4, the loop runs a total of 4 times
+  Average case: O(n)
+  Worst case: O(n)
