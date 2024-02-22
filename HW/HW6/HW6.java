@@ -1,34 +1,26 @@
-import java.util.ArrayList;
-import java.util.Collections;
+import java.util.*;
 
 public class HW6 {
     public static void main (String[] args) {
-        ArrayList<Integer> list = new ArrayList<>();
-        list.add(-5);
-        list.add(0);
-        list.add(5);
-        list.add(-10);
-        list.add(10);
-        list.add(0);
+        int[] list = {-5, 0, 5, -10, 10, 0};
 
-        threeSum(list);
-
+        System.out.println(threeSum(list));
     }
-    public static ArrayList<ArrayList<Integer>> threeSum(ArrayList<Integer> nums) {
-        Collections.sort(nums);
-        int n = nums.size();
+    public static List<List<Integer>> threeSum(int[] nums) {
+        Arrays.sort(nums);
+        int n = nums.length;
 
-        ArrayList<ArrayList<Integer>> triplets = new ArrayList<>();
+        List<List<Integer>> triplets = new ArrayList<>();
 
         for (int i = 0; i < n - 2; i++) {
             for (int j = i + 1; j < n - 1; j++) {
                 for (int k = j + 1; k < n; k++) {
-                    int sum = nums.get(i) + nums.get(j) + nums.get(k);
+                    int sum = nums[i] + nums[j] + nums[k];
 
                     ArrayList<Integer> tempList = new ArrayList<>();
-                    tempList.add(nums.get(i));
-                    tempList.add(nums.get(j));
-                    tempList.add(nums.get(k));
+                    tempList.add(nums[i]);
+                    tempList.add(nums[j]);
+                    tempList.add(nums[k]);
 
                     if (sum == 0) {
                         if (!triplets.contains(tempList)) {
@@ -38,7 +30,6 @@ public class HW6 {
                 }
             }
         }
-
         return triplets;
     }
 }
