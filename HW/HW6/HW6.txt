@@ -1,0 +1,2 @@
+For both the Python and Java programs, I chose to use 3 for loops, each reaching for the element after the current iterated element, as well as the one after that, to add them three as a list
+to the main list, while checking if the sum of the three gives a 0, and if the list is not present already in the list.
