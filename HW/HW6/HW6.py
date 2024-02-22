@@ -14,25 +14,24 @@
 # Input: nums = [-5,0,5,10,-10,0]
 # Output: [[-10,0,10],[-5,0,5]]
 # Explanation: There are two possible combinations of triplets that satisfy: (-5,0,5) and (-10,0,10).
+from typing import List
 
 
-def three_sum(nums):
+def threeSum(nums: List[int]) -> List[List[int]]:
     nums.sort()
     n = len(nums)
-    triplets = list()
+    triplets = []
 
     for i in range(n - 2):
         for j in range(i + 1, n - 1):
             for k in range(j + 1, n):
                 sum = nums[i] + nums[j] + nums[k]
-                print("sum", sum)
                 if sum == 0:
                     if [nums[i], nums[j], nums[k]] not in triplets:
                         triplets.append([nums[i], nums[j], nums[k]])
 
-    return print(triplets)
+    return triplets
 
 
 lis = [-5, 0, 5, 10, -10, 0]
-
-three_sum(lis)
+print(threeSum(lis))
