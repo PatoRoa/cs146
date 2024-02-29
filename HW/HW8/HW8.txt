@@ -1,3 +1,3 @@
-For this homework, after learning more about using hashes, I went with using a hash table for the Python solution, and an array for the Java solution as to count the amount of times a 
-letter appears in the string, then using bitwise operations to filter out unusable letters, or other single letters after one single letter was already accounted for, and returns the 
-string length of largest possible palindrome. This also works with uppercase letters.
+For this homework, after learning more about using hashes and bitwise operations, I went with using a hash table for the Python solution, and an array for the Java solution as to 
+count the amount of times a letter appears in the string, then using bitwise operations to filter out unusable letters, or other single letters after one single letter was already 
+accounted for, and returns the string length of largest possible palindrome. This also works with uppercase letters.
