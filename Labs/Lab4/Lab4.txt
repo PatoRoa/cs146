@@ -1,0 +1,4 @@
+For this Lab, I went with using recursion to swap a binary tree's subtrees and leaves.
+First, the left subtree and right subtree roots are swapped, then the recursive function is used on these roots to do the same on the subsequent leaves.
+
+I also went with printing the original and resulting inverted tree recursively, just for testability.
