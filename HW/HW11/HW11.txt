@@ -1,0 +1,3 @@
+For this homework, I went with using using an extra recursive function.
+This new function handles the statements that are like "check previous pixel" if the pixel being checked is one of the starting pixels, as well as handling incorrect inputs.
+After that its multiple recursive calls over different pixels to cover the entire image.
