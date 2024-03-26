@@ -1,0 +1,13 @@
+For this assignment, I went with using Python to implement both BFS and DFS approaches to Topological sorting, with Kahn's algorithm being a BFS approach, according to what I read on StackOverflow,
+because BFS approaches involve the use of a queue, which Kahn's algorithm does.
+
+The sample input I used for both of these is the following:
+nodes = 8
+edges = [[0, 3], [1, 3], [1, 4], [1, 7], [2, 4], [3, 5], [3, 7], [4, 6], [4, 7], [5, 7], [6, 7]]
+
+A representation of the graph is included in the folder.
+
+After implementing these codes with the sample inputs being run, I found both to be wrong in their results. Kahn's algorithm considers node 5 and 6 to have more indegrees than 3 and 4 for some
+reason. The DFS approach also gets these wrong, saying that node 0 has as many indegrees, if not more, than nodes 3 and 4.
+
+While my code's output might not reflect it, I ended up learning more about what is considered BFS and DFS and how topological sorting works on a technical level.
