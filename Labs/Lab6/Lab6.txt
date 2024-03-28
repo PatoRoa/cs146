@@ -1,0 +1,3 @@
+For this Lab's approach, I went with a topological sort using Kahn's algorithm, which uses a queue.
+Courses and their prerequisites where tracked through an adjacency list and indegrees list, and as classes had their indegrees reduced they were popped out of the queue and into a result list.
+The final boolean checker makes sure there are no overlaps in courses and prerequisites, like in the second test case.
