@@ -1,0 +1,3 @@
+For this Lab, I tried using Floyd-Marshall's. However I couldn't modify it nor be able to track it successfully to avoid it from counting imaginary paths and never changing them without affecting
+the rest of the logic.
+In any case, it got most of the paths right, and after calculating those, I used a counter and some logic using it that would decide which node had the least outgoing edges under the threshold.
