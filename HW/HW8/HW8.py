@@ -9,19 +9,24 @@
 #     - 1 <= s.length <= 2000
 #     - s consists of lowercase and/or uppercase English letters only.
 
-from collections import Counter
+def longestPalindrome(s: str) -> int:
+    hash = {}
 
-def longestPalindrome(s):
-    count = Counter(s)
-    result = 0
+    counter = 0
+    for i in s:
+        if i in hash:
+            hash.pop(i)
+            counter += 1
 
-    for i in count.values():
-        result += i - (i & 1)
-        result += (result & 1 ^ 1) and (i & 1)
+        else:
+            hash[i] = 1
 
-    return print(result)
+    if hash:
+        return counter * 2 + 1
+
+    return counter * 2
 
 
+s = "abccccdd"
 
-string = "Abccccdd"
-longestPalindrome(string)
+longestPalindrome(s)
