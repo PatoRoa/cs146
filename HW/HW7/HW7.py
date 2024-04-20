@@ -24,32 +24,34 @@
 # Output: 1
 # Explanation: We need one server for the job that starts at 0.
 # We can then reassign that same server for the job that starts at 1, and then reassign it for the job that starts at 2.
-from typing import List
-
-MAX = 10000000
+from collections import deque
 
 
-def minMeetingRooms(intervals: List[List[int]]) -> int:
-    servers = 0
-    intervals.sort()
+def minMeetingRooms(intervals):
+    # Sort meetings by end times
+    intervals.sort(key=lambda x: x[1])
 
-    starts = []
-    ends = []
+    # Instantiate queue, add the first meeting chronologically to the queue
+    que = deque()
+    que.append(intervals[0])
 
-    for i in range(len(intervals)):
-        starts.append(intervals[i][0])
-        ends.append(intervals[i][1])
+    # Iterate through the remaining meetings
+    for i in range(1, len(intervals)):
+        # "If the start time of the next meeting is less than end time of the current meeting..."
+        if intervals[i][0] < que[0][1]:
+            pass
 
-    for j in range(ends[-1]):
-        if j in starts:
-            servers += 1
-        if j in ends:
-            servers -= 1
+        # "If the start time of the next meeting is more than or equal to the end time of the current meeting..."
+        else:
+            que.pop()
 
-    print(servers)
-    return servers
+        # In either case, adds another meeting to the queue
+        que.append(intervals[i])
 
 
-k = [[0, 30], [5, 10], [15, 20]]
+    return print(len(que))
 
-minMeetingRooms(k)
+
+intervals = [[0, 1], [1, 2], [2, 3]]
+
+minMeetingRooms(intervals)
