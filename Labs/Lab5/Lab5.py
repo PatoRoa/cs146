@@ -22,25 +22,15 @@ def create_tree():
     return root
 
 
-def isValidBST(root):
-    # Utilizing a secondary function that traverses the tree recursively, returning a boolean value
-    def validifier(root, lower_bound, upper_bound):
-        # Base case where the traversal runs its course and doesn't run into a reason to flag the BST as invalid
-        if root is None:
-            return True
+def isValidBST(root, lower_bound, upper_bound):
+    if root is None:
+        return True
 
-        # The deciding comparison; checks if any of the children don't fit the rule of thumb of a BST
-        if root.val <= lower_bound or root.val >= upper_bound:
-            return False
+    if root.val >= upper_bound or root.val <= lower_bound:
+        return False
 
-        # Runs the function recursively, using the comparative statement and the resulting boolean value from the
-        # checker, while using the root's value as an upper bound or lower bound for comparisons in case it's a
-        # duplicate
-        return validifier(root.left, lower_bound, root.val) and \
-            validifier(root.right, root.val, upper_bound)
-
-    # Kicks off the function
-    return validifier(root, float('-inf'), float('inf'))
+    return isValidBST(root.left, lower_bound, root.val) and \
+        isValidBST(root.right, root.val, upper_bound)
 
 
 def print_tree(root):
@@ -57,4 +47,4 @@ tree = create_tree()
 print_tree(tree)
 print("\n")
 
-print(isValidBST(tree))
+print(isValidBST(tree, float('-INF'), float('INF')))
