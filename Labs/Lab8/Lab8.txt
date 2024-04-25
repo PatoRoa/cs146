@@ -1,0 +1,2 @@
+For this assignment, I performed Tabulation using the specified coins as the x-axis of the table, and the de facto y-axis is the array's index, which functions as the values to build the coin
+combinations up to
